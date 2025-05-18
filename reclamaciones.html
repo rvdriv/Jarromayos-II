@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Libro de Reclamaciones - Pollería Jarromayos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff8f2;
+      font-size: .8rem;
+    
+    }
+    h1, h2 {
+      text-align: center;
+      color: #b63d0f;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .form-section {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+
+    .form-section label {
+      display: flex;
+   
+     
+    }
+
+
+    .submit-btn {
+      background-color: #b63d0f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+    }
+
+    .logo-reclam{
+
+      width: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Libro de Reclamaciones</h1>
+  <h2>Pollería Jarromayos</h2>
+
+  <img class="logo-reclam" src="img/logo.png" alt="">
+
+  <div class="form-section">
+    <p><strong>Dirección:</strong> Av. Canto Grande 2772, Lima, Perú</p>
+    <p><strong>Teléfono:</strong> +51 987 654 321</p>
+    <p><strong>Correo:</strong> Xtremw.sk8.xd@hotmail.com</p>
+    <p><strong>RUC:</strong> 10433198285</p>
+  </div>
+
+  <form>
+    <div class="form-section">
+      <h3>Datos del Consumidor</h3>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="documento">DNI / CE / Pasaporte:</label>
+      <input type="text" id="documento" name="documento" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo">
+
+      <label for="domicilio">Domicilio:</label>
+      <input type="text" id="domicilio" name="domicilio">
+    </div>
+
+    <div class="form-section">
+      <h3>Detalle de la Reclamación o Queja</h3>
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Seleccione una opción</option>
+        <option value="reclamo">Reclamo</option>
+        <option value="queja">Queja</option>
+      </select>
+
+      <label for="fecha">Fecha del incidente:</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="descripcion">Descripción del hecho:</label>
+      <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+      <label for="pedido">Pedido del consumidor:</label>
+      <textarea id="pedido" name="pedido" rows="3" required></textarea>
+    </div>
+
+    <div class="form-section">
+      <h3>Conformidad del Consumidor</h3>
+      <label>
+        <input type="checkbox" required>
+        Declaro ser el titular de la presente reclamación y acepto que la empresa me contacte para dar solución a lo planteado.
+      </label>
+
+      <label for="firma">Firma (Nombre completo):</label>
+      <input type="text" id="firma" name="firma">
+
+      <label for="fecha_firma">Fecha:</label>
+      <input type="date" id="fecha_firma" name="fecha_firma">
+    </div>
+
+    <p><strong>Nota:</strong> La empresa tiene un plazo de 15 días hábiles para responder al reclamo. La presentación del reclamo no impide acudir a otras vías de solución de conflictos ni es requisito previo para ello.</p>
+
+    <button type="submit" class="submit-btn">Enviar Reclamo</button>
+  </form>
+
+</body>
+</html>
